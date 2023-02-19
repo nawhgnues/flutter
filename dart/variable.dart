@@ -36,4 +36,31 @@ void main() {
   // 위의 코드와 동일
   seung?.isNotEmpty;
   print(seung);
+
+  // #4 Immutable Variables
+  final String finalName = "seung";
+
+  // error: The final variable can only be set once.
+  finalName = "lalalala";
+
+  // #5 Late Variables
+  late final String lateName;
+  // do something, go to api
+  name = "seung"
+
+  // Late variables is null safety: 값이 선언되기 전에 호출되면 에러를 보여준다.
+  // name에 값이 할당되기 전 print(name)을 실행하면 에러가 발생한다.
+
+  // #6 const variables in flutter: 컴파일 할 때 알고 있는 값만을 선언할 수 있다. 
+  
+  // 컴파일 시 값을 모르기떄문에(api를 통해 값을 받아와야함) const를 사용할 수 없다.
+  const API = fetchAPI() 
+  
+  // 앱에서 사용할 상수을 선언할 떄 주로 사용
+  const max_price = 120;
+
+
 }
+
+
+
